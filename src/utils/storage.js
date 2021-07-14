@@ -12,7 +12,6 @@ export const setItem = (name, vale) => {
 export const getItem = name => {
   const data = window.localStorage.getItem(name)
   try {
-    console.log(JSON.parse(data))
     return JSON.parse(data)
   } catch (err) {
     return window.localStorage.getItem(data)
