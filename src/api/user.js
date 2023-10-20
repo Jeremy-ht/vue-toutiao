@@ -17,3 +17,21 @@ export function login (data) {
     data
   })
 }
+
+export function loginNew (data) {
+  return request({
+    method: 'POST',
+    url: '/app/v1_0/authorizations',
+    data
+  })
+}
+
+/**
+ * 获取验证码
+ */
+export function sendSmsCodeNew (mobile) {
+  return request({
+    method: 'GET',
+    url: `/app/v1_0/sms/codes/${mobile}`
+  })
+}
